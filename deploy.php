@@ -39,7 +39,8 @@ host('production.app.com') // Name of the server
     ->hostname('178.128.104.220') // Hostname or IP address
     ->stage('production') // Deployment stage (production, staging, etc)
     ->user('deployer') // SSH user
-    ->set('deploy_path', '/var/www/laravel-gh-action'); // Deploy path
+    ->set('deploy_path', '/var/www/laravel-gh-action')
+    ->set('http_user', 'www-data'); // Deploy path
 
 after('deploy:failed', 'deploy:unlock'); // Unlock after failed deploy
 
