@@ -31,6 +31,8 @@ jobs:
           extension-csv: mbstring, bmath
       - name: Composer install
         run: composer install
+      - name: Generate artisan key
+        run: php artisan key:generate
       - name: Run tests
         run: ./vendor/bin/phpunit
   deploy:
