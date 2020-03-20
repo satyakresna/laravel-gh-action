@@ -58,7 +58,7 @@ task('deploy', [
     'artisan:view:cache',   // |
     'artisan:config:cache', // | Laravel specific steps
     'artisan:optimize',     // |
-    'artisan:migrate',      // |
+    // 'artisan:migrate',      // |
     'deploy:symlink',
     'deploy:unlock',
     'cleanup',
