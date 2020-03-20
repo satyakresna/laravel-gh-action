@@ -32,7 +32,9 @@ jobs:
       - name: Composer install
         run: composer install
       - name: Generate artisan key
-        run: php artisan key:generate
+        run: |
+          cp .env.example .env
+          php artisan key:generate
       - name: Run tests
         run: ./vendor/bin/phpunit
   deploy:
