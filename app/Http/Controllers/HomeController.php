@@ -8,7 +8,7 @@ class HomeController extends Controller
 {
     public function index()
     {
-        return 'ini home';
+        return view('home');
     }
 
     public function test()
